@@ -8,7 +8,7 @@
  * 自定义图形块
  */
 //% weight=5 color=#0fbc11 icon="\uf113"
-namespace Servo {
+namespace Woaibiancheng {
     const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
     const MODE2 = 0x01
@@ -48,7 +48,7 @@ namespace Servo {
 
     function i2cread(addr: number, reg: number) {
         pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE);
-        let val = pins.i2cReadNumber(addr, NumberFormat.UInt8BE);
+        let val = pins.i2cReadNumber(addr, NumberFormat.UInt8BE, false);
         return val;
     }
 
@@ -123,4 +123,17 @@ namespace Servo {
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
+ 
+    //% blockId=woaibiancheng_ill block="Ultrasonic"
+    //% weight=10
+    export function Illuminance(): number {
+
+        pins.i2cWriteNumber(35,1,NumberFormat.UInt8BE,false)
+        pins.i2cWriteNumber(35,16,NumberFormat.UInt8BE,false)
+        let y = pins.i2cReadNumber(35, NumberFormat.UInt16BE, false)        
+  
+        return y/1.2;
+    }
+
+
 } 
