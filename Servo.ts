@@ -7,7 +7,7 @@
 /**
  * 自定义图形块
  */
-//% weight=5 color=#0fbc11 icon="\uf113"
+//% weight=5 color=#0fbc11 icon="\uf114"
 namespace Woaibiancheng {
     const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
@@ -125,15 +125,11 @@ namespace Woaibiancheng {
     }
  
     //% blockId=woaibiancheng_ill block="Ultrasonic"
-    //% weight=10
+    //% weight=99
     export function Illuminance(): number {
-
-        pins.i2cWriteNumber(35,1,NumberFormat.UInt8BE,false)
-        pins.i2cWriteNumber(35,16,NumberFormat.UInt8BE,false)
-        let y = pins.i2cReadNumber(35, NumberFormat.UInt16BE, false)        
-  
+        pins.i2cWriteNumber(35,1,NumberFormat.UInt8BE,false);
+        pins.i2cWriteNumber(35,16,NumberFormat.UInt8BE,false);
+        let y = pins.i2cReadNumber(35, NumberFormat.UInt16BE, false);       
         return y/1.2;
     }
-
-
 } 
