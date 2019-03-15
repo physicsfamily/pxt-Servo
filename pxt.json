@@ -1,6 +1,6 @@
 {
     "name": "Servo",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Extension for waveshare PCA8965 Servo Driver",
     "license": "MIT",
     "dependencies": {
