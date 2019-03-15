@@ -1,4 +1,5 @@
 {
-	"Servo.Servo|block": "设置舵机 %channel|角度 %degree",
-	"Servo.ServoPulse|block": "设置舵机 %channel|脉宽 %pulse"
+	"Woaibiancheng.Servo|block": "设置舵机 %channel|角度 %degree",
+	"Woaibiancheng.ServoPulse|block": "设置舵机 %channel|脉宽 %pulse",
+	"Woaibiancheng.Illuminance|block":"照度"
 }
