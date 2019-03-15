@@ -1,7 +1,7 @@
 {
-    "name": "Servo",
+    "name": "Woaibiancheng",
     "version": "0.0.1",
-    "description": "Extension for waveshare PCA8965 Servo Driver",
+    "description": "Extension for Woaibiancheng",
     "license": "MIT",
     "dependencies": {
         "core": "*"
